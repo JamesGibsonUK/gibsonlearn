@@ -1,0 +1,96 @@
+{% extends "_layout" %}
+
+{% block content %}
+
+<div class="content-wrapper">
+
+  <div class="container">
+    <div class="full-width">
+      {% if not category.hasDescendants() %}
+      {% set parent = craft.categories.ancestorOf(category).order('lft desc').first() %}
+      <div class="hero-background {{parent.slug}}">
+
+        {% else %}
+              <div class="hero-background {{category.slug}}">
+        {% endif %}
+
+
+        <div class="hero">
+
+          <h1>{{category.title}}</h1>
+
+          {% for block in category.categoryBody %}
+
+          {% if block.type == "text" %}
+
+          {{ block.text|markdown }}
+
+        {% elseif block.type == "button" %}
+
+          <a href="{{ block.destination }}"><button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button">
+            {{ block.text }}
+          </button></a>
+
+          {% endif %}
+
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% if category.hasDescendants() %}
+
+<div class="container">
+  <div class="full-width">
+
+
+    {% for childCategory in category.getDescendants() %}
+
+
+    <div class="topic-item">
+    <div class="hero-background {{category.slug}}">
+      <div class="topic-navigation">
+          <a href=" {{ childCategory.url }}"> {{ childCategory.title }} </a>
+      </div>
+    </div>
+  </div>
+
+  {% endfor %}
+
+
+
+  </div>
+</div>
+
+{% endif %}
+
+  <div class="container">
+
+    {% if not category.hasDescendants() %}
+
+{% set entries = craft.entries.relatedTo(category).limit(3) %}
+
+{% for entry in entries %}
+    <li class="block">
+      <a href="{{ entry.url }}"></a>
+      <div class="card">
+    <div class="card-header">
+      <h3>{{ entry.title }}</h3>
+    </div>
+    <div class="card-copy">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, officiis sunt neque facilis culpa molestiae necessitatibus delectus veniam provident.</p>
+    </div>
+  </div>
+    </li>
+{% endfor %}
+
+{% endif %}
+
+
+
+
+
+</div>
+
+{% endblock %}
