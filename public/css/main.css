@@ -933,10 +933,6 @@ header.navigation .navigation-tools {
   font-family: "proxima-nova", sans-serif;
 }
 
-h3.footer-section {
-  margin-bottom: 60px;
-}
-
 .red-section-textured {
   background-color: #a0aef7;
   background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/lil_fiber.png"), -webkit-linear-gradient(-450deg, #0d29b6, #0a1d81), center no-repeat #0d29b6 scroll;
