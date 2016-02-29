@@ -484,7 +484,7 @@ $texture-bottom-background: darken(white, 10%);
 
 .article-item {
   @include span-columns(3);
-  @include omega(5n);
+  @include omega(4n);
   padding: 5px;
   margin-top: 20px;
   background-image: url("/images/red.jpg");
@@ -498,7 +498,7 @@ $texture-bottom-background: darken(white, 10%);
     }
     .outline {
       border-width: 2px;
-      height: 7em;
+      height: 7.5em;
     }
 }
 
