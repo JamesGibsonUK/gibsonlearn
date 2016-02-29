@@ -28,6 +28,7 @@
   },
   "dependencies": {
     "bourbon": "^4.2.6",
+    "bricks.js": "^1.0.0",
     "neat": "^1.2.2"
   }
 }

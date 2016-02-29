@@ -1092,6 +1092,7 @@ header.navigation .navigation-tools {
 }
 .article-item .outline {
   border-width: 2px;
+  height: 7em;
 }
 
 .subscribe {
