@@ -20,72 +20,62 @@
 {% extends "_layout" %}
 
 {% block content %}
-<div class="content-wrapper">
 
-  <div class="container">
-    <div class="full-width">
-   <div class="hero-background">
-    <div class="hero">
-      <h2>A Level Revision</h2>
-      <p> {{ entry.body }}</p>
+<main>
+
+  <div class="section hero-section">
+    <div class="container">
+      <div class="hero">
+        <div class="hero-content">
+    <h2>Your guide to A Level success.</h2>
+    <p>Gibson Learn is the ultimate revision resource for Edexcel Economics, Geography, Maths, and Politics. This is a <strong>student-ran</strong>, not-for-profit project that aims to help A Level students. </p>
+  </div>
+      </div>
+    </hero>
     </div>
   </div>
-</div>
-  </div>
 
+  <div class="section red-section">
+    <div class="container">
 
+      <div class="about">
+        <p>Gibson Learn is a collaborative revision site that uses official exam specifications to make tailored revision resources for Edexcel AS and A2 subjects. If you would like to help contribute, please send an email to james@jamesolivergibson.com.
+        </p>
+      </div>
 
-
-
-  <div class="container">
-    <div class="full-width">
-
-
-
-
-
-      <div class="topic-item">
-      <div class="hero-background economics">
-        <div class="topic-navigation">
-            <a href="/economics"> Economics </a>
+      <div class="subject-list">
+        <div class="outline">
+          <p>Want to succeed at A Level? Gibson Learn has revision materials designed specifically for the Edexecel exam boards. By studying with our resources, you can feel confident in the Summer.
+          </div>
         </div>
+
       </div>
+
     </div>
 
-    <div class="topic-item">
-    <div class="hero-background geography">
-      <div class="topic-navigation">
-          <a href="/geography"> Geography </a>
-      </div>
-    </div>
-  </div>
+<div class="section red-section-textured">
+<div class="container">
+    <div class="subscribe">
+      <h3>Subscribe</h3>
+      <p>Enter your email to receive regular updates from Gibson Learn.</p>
+      <fieldset>
 
-  <div class="topic-item">
-  <div class="hero-background politics">
-    <div class="topic-navigation">
-        <a href="/politics"> Politics </a>
-    </div>
-  </div>
-</div>
+        <form>
 
-<div class="topic-item">
-<div class="hero-background maths">
-  <div class="topic-navigation">
-      <a href="/maths"> Maths </a>
+          <input placeholder="Enter your email address" type="text" id="text_field"/></p>
+
+        <p><input type="submit" value="Submit"/></p>
+      </form>
+
+    </fieldset>
+
   </div>
 </div>
 </div>
 
 
 
-
-    </div>
-  </div>
-
-
-
-
-</div>
+</main>
 
 
 {% endblock %}

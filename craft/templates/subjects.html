@@ -4,59 +4,59 @@
 
 {% block content %}
 
+<main>
+
+  <div class="section title-section">
+    <div class="container">
+      <div class="hero">
+        <span class="badge-error">Edexcel</span>
+    <h1>{{category.title}}</h1>
+
+              {% for block in category.categoryBody %}
+
+              {% if block.type == "text" %}
+
+              {{ block.text|markdown }}
+
+            {% elseif block.type == "button" %}
+
+              <a href="{{ block.destination }}"><button>
+                {{ block.text }}
+              </button></a>
+
+              {% endif %}
+
+              {% endfor %}
+
+{% if category.hasDescendants() %}
+
+    <div class="topic-list">
+      <div class="outline">
+      <ul>
+        {% for childCategory in category.getDescendants() %}
+        <li><a href=" {{ childCategory.url }}"> {{ childCategory.title }} </a> </li>
+
+        {% endfor %}
+      </ul>
+    </div>
+    </div>
+
+    {% endif %}
 
 
-<div class="content-wrapper">
-
-  <div class="container">
-    <div class="full-width">
-      {% if not category.hasDescendants() %}
-      {% set parent = craft.categories.ancestorOf(category).order('lft desc').first() %}
-      <div class="hero-background {{parent.slug}}">
-
-        {% else %}
-              <div class="hero-background {{category.slug}}">
-        {% endif %}
-
-
-        <div class="hero">
-
-          <h1>{{category.title}}</h1>
-
-          {% for block in category.categoryBody %}
-
-          {% if block.type == "text" %}
-
-          {{ block.text|markdown }}
-
-        {% elseif block.type == "button" %}
-
-          <a href="{{ block.destination }}"><button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button">
-            {{ block.text }}
-          </button></a>
-
-          {% endif %}
-
-          {% endfor %}
-        </div>
       </div>
     </div>
   </div>
 
-{% if category.hasDescendants() %}
+<div class="section light-blue-section">
+  <div class="container">
+              <h3>Revision Resources</h3>
 
-<div class="container">
-  <div class="full-width">
-
-
-    {% for childCategory in category.getDescendants() %}
-
-
-    <div class="topic-item">
-    <div class="hero-background {{category.slug}}">
-      <div class="topic-navigation">
-          <a href=" {{ childCategory.url }}"> {{ childCategory.title }} </a>
-      </div>
+{% set entries = craft.entries.relatedTo(category).limit(3) %}
+{% for entry in entries %}
+    <div class="article-item">
+      <div class="outline">
+      <a>{{entry.title}}</a>
     </div>
   </div>
 
@@ -64,37 +64,52 @@
 
 
 
+
+
+
   </div>
 </div>
 
-{% endif %}
 
-  <div class="container">
+  <div class="section red-section">
+    <div class="container">
 
-    {% if not category.hasDescendants() %}
+      <div class="about">
+        <p>Gibson Learn is a collaborative revision site that uses official exam specifications to make tailored revision resources for Edexcel AS and A2 subjects. If you would like to help contribute, please send an email to james@jamesolivergibson.com.
+        </p>
+      </div>
 
-{% set entries = craft.entries.relatedTo(category).limit(3) %}
+      <div class="subject-list">
+        <div class="outline">
+          <p>Want to succeed at A Level? Gibson Learn has revision materials designed specifically for the Edexecel exam boards. By studying with our resources, you can feel confident in the Summer.
+          </div>
+        </div>
 
-{% for entry in entries %}
-    <li class="block">
-      <a href="{{ entry.url }}"></a>
-      <div class="card">
-    <div class="card-header">
-      <h3>{{ entry.title }}</h3>
+      </div>
+
     </div>
-    <div class="card-copy">
-      <p>{{ entry.summary }}</p>
-    </div>
+
+<div class="section red-section-textured">
+<div class="container">
+    <div class="subscribe">
+      <h3>Subscribe</h3>
+      <fieldset>
+
+        <form>
+
+          <input placeholder="Enter your email address" type="text" id="text_field"/></p>
+
+        <p><input type="submit" value="Submit"/></p>
+      </form>
+
+    </fieldset>
+
   </div>
-    </li>
-{% endfor %}
-
-{% endif %}
-
-
-
-
-
 </div>
+</section>
+
+</main>
+
+
 
 {% endblock %}
