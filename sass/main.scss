@@ -491,7 +491,8 @@ $texture-bottom-background: darken(white, 10%);
   background-size: cover;
   background-position: center;
   font-family: $heading-font-family;
-  font-size: $base-font-size;
+  font-size: $base-font-size*0.8;
+
 
     a {
       color: whitesmoke;
@@ -500,6 +501,22 @@ $texture-bottom-background: darken(white, 10%);
       border-width: 2px;
       height: 7.5em;
     }
+
+    @include media(max-width 900px) {
+      @include span-columns(4);
+      @include omega(3n);
+    }
+
+    @include media(max-width 700px) {
+      @include span-columns(6);
+      @include omega(2n);
+    }
+
+    @include media(max-width 500px) {
+      @include span-columns(12);
+      @include omega(1n);
+    }
+
 }
 
 .subscribe {

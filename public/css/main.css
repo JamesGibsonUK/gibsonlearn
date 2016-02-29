@@ -1076,7 +1076,7 @@ header.navigation .navigation-tools {
   background-size: cover;
   background-position: center;
   font-family: "proxima-nova", sans-serif;
-  font-size: 1.3em;
+  font-size: 1.04em;
 }
 .article-item:last-child {
   margin-right: 0;
@@ -1093,6 +1093,57 @@ header.navigation .navigation-tools {
 .article-item .outline {
   border-width: 2px;
   height: 7.5em;
+}
+@media screen and (max-width: 900px) {
+  .article-item {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 31.76157%;
+  }
+  .article-item:last-child {
+    margin-right: 0;
+  }
+  .article-item:nth-child(3n) {
+    margin-right: 0;
+  }
+  .article-item:nth-child(3n+1) {
+    clear: left;
+  }
+}
+@media screen and (max-width: 700px) {
+  .article-item {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 48.82117%;
+  }
+  .article-item:last-child {
+    margin-right: 0;
+  }
+  .article-item:nth-child(2n) {
+    margin-right: 0;
+  }
+  .article-item:nth-child(2n+1) {
+    clear: left;
+  }
+}
+@media screen and (max-width: 500px) {
+  .article-item {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 100%;
+  }
+  .article-item:last-child {
+    margin-right: 0;
+  }
+  .article-item:nth-child(1n) {
+    margin-right: 0;
+  }
+  .article-item:nth-child(1n+1) {
+    clear: left;
+  }
 }
 
 .subscribe {
