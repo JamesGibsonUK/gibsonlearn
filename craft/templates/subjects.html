@@ -52,11 +52,18 @@
   <div class="container">
               <h3>Revision Resources</h3>
 
-{% set entries = craft.entries.relatedTo(category).limit(3) %}
+  {% if not category.hasDescendants() %}
+{% set entries = craft.entries.relatedTo(category).limit(900) %}
+  {% else %}
+{% set entries = craft.entries.relatedTo(category).limit(12) %}
+
+{% endif %}
+
+
 {% for entry in entries %}
     <div class="article-item">
       <div class="outline">
-      <a>{{entry.title}}</a>
+      <a href="{{entry.url}}">{{entry.title}}</a>
     </div>
   </div>
 
