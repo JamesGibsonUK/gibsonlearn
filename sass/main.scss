@@ -57,6 +57,7 @@ header {
 }
 
 header.navigation {
+  font-weight: 800;
   $base-border-color: gainsboro !default;
   $base-border-radius: 3px !default;
   $action-color: #477DCA !default;
@@ -455,6 +456,7 @@ $texture-bottom-background: darken(white, 10%);
 }
 
 .topic-list {
+  font-weight: 800;
   margin-top:40px;
   background-image:url("/images/hero.jpg");
   padding: 10px;
@@ -541,11 +543,7 @@ $texture-bottom-background: darken(white, 10%);
 
 .title-section {
   padding-top: 4em;
-  padding-bottom: 2em;
-  $texture-top-background: lighten(white, 1%);
-$texture-bottom-background: darken(white, 10%);
-  background-color: $light-blue;
-    @include texture(180deg, $texture-top-background, $texture-bottom-background, 61 , 1);
+  padding-bottom: 4em;
 }
 
 .article-section {
@@ -590,9 +588,8 @@ button {
 
   p {
     font-family: $heading-font-family;
-    color: whitesmoke;
+    color: black;
     opacity: 0.9;
-    text-transform: uppercase;
   }
 
   input {

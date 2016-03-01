@@ -681,6 +681,7 @@ header {
 }
 
 header.navigation {
+  font-weight: 800;
   background-color: #0d28b1;
   min-height: 60px;
   width: 100%;
@@ -1042,6 +1043,7 @@ header.navigation .navigation-tools {
 }
 
 .topic-list {
+  font-weight: 800;
   margin-top: 40px;
   background-image: url("/images/hero.jpg");
   padding: 10px;
@@ -1186,10 +1188,7 @@ header.navigation .navigation-tools {
 
 .title-section {
   padding-top: 4em;
-  padding-bottom: 2em;
-  background-color: #a0aef7;
-  background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/kindajean.png"), -webkit-linear-gradient(-450deg, white, #e6e6e6), center no-repeat white scroll;
-  background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/kindajean.png"), linear-gradient(180deg, white, #e6e6e6), center no-repeat white scroll;
+  padding-bottom: 4em;
 }
 
 .article-section {
@@ -1239,9 +1238,8 @@ button {
 }
 .subscribe p {
   font-family: "proxima-nova", sans-serif;
-  color: whitesmoke;
+  color: black;
   opacity: 0.9;
-  text-transform: uppercase;
 }
 .subscribe input {
   margin-top: 1em;
