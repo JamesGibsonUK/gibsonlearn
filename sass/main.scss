@@ -621,7 +621,9 @@ button {
 }
 
 .heading {
-  background-image: url("/images/hero.jpg");
+  background-image: url("/images/red.jpg");
+  background-size: cover;
+  background-position: center;
   color: whitesmoke;
   padding: 10px;
 
