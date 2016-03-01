@@ -7,7 +7,7 @@
 
 
 <main>
-<div class="section article-section">
+<div class="section">
   <div class="container">
 
     <div class="content">
@@ -22,8 +22,8 @@
 
 
 <div class="sidebar">
-  <button>Rebranding Places</button>
-  <button>Geography</button>
+  <a href="/{{entry.subject.first().slug}}">  <button>{{entry.subject.first()}}</button></a>
+  <a href="/{{entry.subject.first().slug}}/{{entry.topic.last().slug}}"> <button>{{entry.topic.last()}}</button> </a>
 
   <div class="section red-section sidebar-section">
     <p>Gibson Learn is an A Level revision website that provides condensed resources for a variety of A Level subjects.</p>

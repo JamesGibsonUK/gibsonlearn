@@ -613,6 +613,11 @@ button {
 
 .content {
   @include span-columns(8);
+
+  @media (max-width: 900px) {
+    @include span-columns(12);
+  }
+
 }
 
 .heading {
@@ -635,5 +640,11 @@ position: relative;
     display: block;
     position: relative;
     width: 100%;
+
   }
+
+  @media (max-width: 900px) {
+    @include span-columns(12);
+  }
+
 }
