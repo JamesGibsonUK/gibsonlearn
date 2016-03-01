@@ -5,10 +5,20 @@
 {% block content %}
 
 <main>
+  <div class="topic-list">
+
+    <ul>
+      {% for childCategory in category.getDescendants() %}
+      <li><a href=" {{ childCategory.url }}"> {{ childCategory.title }} </a> </li>
+
+      {% endfor %}
+    </ul>
+
+  </div>
 
   <div class="section title-section">
     <div class="container">
-      <div class="hero">
+      <div class="subject-hero">
         <span class="badge-error">Edexcel</span>
     <h1>{{category.title}}</h1>
 
@@ -30,16 +40,7 @@
 
 {% if category.hasDescendants() %}
 
-    <div class="topic-list">
-      <div class="outline">
-      <ul>
-        {% for childCategory in category.getDescendants() %}
-        <li><a href=" {{ childCategory.url }}"> {{ childCategory.title }} </a> </li>
 
-        {% endfor %}
-      </ul>
-    </div>
-    </div>
 
     {% endif %}
 

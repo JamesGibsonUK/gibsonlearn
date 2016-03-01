@@ -353,7 +353,11 @@ header.navigation {
   font-family: $heading-font-family;
 }
 
-
+.subject-hero {
+  h1 {
+    margin-bottom: 0px;
+  }
+}
 .red-section-textured {
   $texture-top-background: lighten($primary-blue, 1%);
 $texture-bottom-background: darken($primary-blue, 10%);
@@ -461,7 +465,7 @@ $texture-bottom-background: darken(white, 10%);
   background-image:url("/images/hero.jpg");
   padding: 10px;
   font-family: $heading-font-family;
-  font-size: 1.5em;
+  font-size: 1em;
   color: whitesmoke;
   text-align: center;
 
@@ -489,6 +493,7 @@ $texture-bottom-background: darken(white, 10%);
   @include omega(4n);
   padding: 5px;
   margin-top: 20px;
+  font-weight: 800;
   background-image: url("/images/red.jpg");
   background-size: cover;
   background-position: center;

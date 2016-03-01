@@ -934,6 +934,10 @@ header.navigation .navigation-tools {
   font-family: "proxima-nova", sans-serif;
 }
 
+.subject-hero h1 {
+  margin-bottom: 0px;
+}
+
 .red-section-textured {
   background-color: #a0aef7;
   background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/lil_fiber.png"), -webkit-linear-gradient(-450deg, #0d29b6, #0a1d81), center no-repeat #0d29b6 scroll;
@@ -1048,7 +1052,7 @@ header.navigation .navigation-tools {
   background-image: url("/images/hero.jpg");
   padding: 10px;
   font-family: "proxima-nova", sans-serif;
-  font-size: 1.5em;
+  font-size: 1em;
   color: whitesmoke;
   text-align: center;
 }
@@ -1074,6 +1078,7 @@ header.navigation .navigation-tools {
   width: 23.23176%;
   padding: 5px;
   margin-top: 20px;
+  font-weight: 800;
   background-image: url("/images/red.jpg");
   background-size: cover;
   background-position: center;
