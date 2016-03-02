@@ -583,13 +583,10 @@ button {
   }
 
   input[type=submit]  {
-    background-color: whitesmoke;
-    color: $primary-blue;
-    border-style: none;
-    border-width: 0;
+
 
     input:hover {
-      background-color: $light-gray;
+
     }
 
   }
@@ -611,6 +608,7 @@ button {
 
 .content {
   @include span-columns(8);
+  padding-right: 3em;
 
   @media (max-width: 900px) {
     @include span-columns(12);

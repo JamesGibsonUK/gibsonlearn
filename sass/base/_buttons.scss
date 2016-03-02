@@ -36,7 +36,7 @@
   }
 }
 
-.button-light  {
+input.button-light  {
   background-color: whitesmoke;
   color: $primary-blue;
   border-style: none;
@@ -45,6 +45,7 @@
 }
 
 
-  button-light:hover {
+  input.button-light:hover {
     background-color: $light-gray;
+    color: $primary-blue;
   }

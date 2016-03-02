@@ -382,15 +382,16 @@ button:disabled:hover, input[type="button"]:disabled:hover, input[type="reset"]:
   background-color: #1565c0;
 }
 
-.button-light {
+input.button-light {
   background-color: whitesmoke;
   color: #0d28b1;
   border-style: none;
   border-width: 0;
 }
 
-button-light:hover {
+input.button-light:hover {
   background-color: #ddd;
+  color: #0d28b1;
 }
 
 fieldset {
@@ -1242,15 +1243,6 @@ button {
   margin-top: 1em;
   font-family: "proxima-nova", sans-serif;
 }
-.subscribe input[type=submit] {
-  background-color: whitesmoke;
-  color: #0d28b1;
-  border-style: none;
-  border-width: 0;
-}
-.subscribe input[type=submit] input:hover {
-  background-color: #ddd;
-}
 .subscribe input#text_field {
   color: black;
 }
@@ -1272,6 +1264,7 @@ button {
   display: block;
   margin-right: 2.35765%;
   width: 65.88078%;
+  padding-right: 3em;
 }
 .content:last-child {
   margin-right: 0;
