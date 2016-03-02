@@ -7,12 +7,21 @@
 <main>
   <div class="topic-list">
 
+{% if category.hasDescendants() %}
     <ul>
       {% for childCategory in category.getDescendants() %}
       <li><a href=" {{ childCategory.url }}"> {{ childCategory.title }} </a> </li>
 
       {% endfor %}
     </ul>
+
+    {% else %}
+
+{% for parentCategory in category.getAncestors() %}
+    <a href="{{ parentCategory.url }}"> Go back to {{ parentCategory.title }}</a>
+    {% endfor %}
+
+    {% endif %}
 
   </div>
 
@@ -63,7 +72,6 @@
 <div class="container">
 {% for entry in entries %}
     <div class="article-item">
-
       <a href="{{entry.url}}">{{entry.title}}</a>
   </div>
 
@@ -96,7 +104,7 @@
 
     </div>
 
-<div class="section red-section-textured">
+<div class="section subscribe-section">
 <div class="container">
     <div class="subscribe">
       <h3>Subscribe</h3>
@@ -106,7 +114,7 @@
 
           <input placeholder="Enter your email address" type="text" id="text_field"/></p>
 
-        <p><input type="submit" value="Submit"/></p>
+        <p><input type="submit" class="button-light" value="Submit"/></p>
       </form>
 
     </fieldset>
