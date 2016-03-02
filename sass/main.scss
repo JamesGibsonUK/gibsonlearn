@@ -445,9 +445,9 @@ $texture-bottom-background: darken(white, 10%);
 
 .topic-list {
   font-weight: 800;
-  margin-top:40px;
-  background-image:url("/images/hero.jpg");
-  padding: 10px;
+  background-color: $dark-gray;
+  color: $primary-blue;
+  padding: 1em;
   font-family: $heading-font-family;
   font-size: 1em;
   color: whitesmoke;
@@ -455,6 +455,7 @@ $texture-bottom-background: darken(white, 10%);
 
   ul {
     display: inline-block;
+    padding: 0px;
   }
 
   ul li {
@@ -464,7 +465,7 @@ $texture-bottom-background: darken(white, 10%);
   }
 
   a {
-    color: inherit;
+    color: white;
   }
 
   a:hover {
@@ -484,6 +485,10 @@ $texture-bottom-background: darken(white, 10%);
 
     a {
       color: whitesmoke;
+    }
+
+    a:hover {
+      opacity: 0.7;
     }
 
 
