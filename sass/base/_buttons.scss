@@ -35,3 +35,16 @@
     }
   }
 }
+
+.button-light  {
+  background-color: whitesmoke;
+  color: $primary-blue;
+  border-style: none;
+  border-width: 0;
+
+}
+
+
+  button-light:hover {
+    background-color: $light-gray;
+  }

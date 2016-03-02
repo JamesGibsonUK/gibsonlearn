@@ -382,6 +382,17 @@ button:disabled:hover, input[type="button"]:disabled:hover, input[type="reset"]:
   background-color: #1565c0;
 }
 
+.button-light {
+  background-color: whitesmoke;
+  color: #0d28b1;
+  border-style: none;
+  border-width: 0;
+}
+
+button-light:hover {
+  background-color: #ddd;
+}
+
 fieldset {
   background-color: transparent;
   border: 0;
@@ -951,7 +962,6 @@ header.navigation .navigation-tools {
 }
 
 .hero-section {
-  background-color: white;
   padding-top: 6em;
   padding-bottom: 6em;
   background-position: center;
@@ -960,19 +970,11 @@ header.navigation .navigation-tools {
   border-color: transparent;
   background-repeat: no-repeat;
   background-image: url("/images/hero.jpg");
-}
-
-.hero-content {
-  background-color: white;
-  padding-right: 5em;
-  padding-left: 5em;
-  padding-top: 3em;
-  padding-bottom: 3em;
-  box-shadow: inset 0 1px 3px rgba(255, 255, 255, 0.06);
+  color: white;
 }
 
 .red-section {
-  background-color: #c40824;
+  background-color: #0f0f0f;
   font-family: "proxima-nova", sans-serif;
   color: whitesmoke;
 }
@@ -985,12 +987,6 @@ header.navigation .navigation-tools {
   font-size: 4em;
   line-height: 1.1em;
   margin-bottom: 0.25em;
-  color: transparent;
-  background-image: url(/images/hero.jpg);
-  background-position: center;
-  background-size: fit;
-  -webkit-background-clip: text;
-  background-clip: text;
 }
 
 .hero p {
@@ -1079,9 +1075,6 @@ header.navigation .navigation-tools {
   padding: 5px;
   margin-top: 20px;
   font-weight: 800;
-  background-image: url("/images/red.jpg");
-  background-size: cover;
-  background-position: center;
   font-family: "proxima-nova", sans-serif;
   font-size: 1.04em;
 }
@@ -1096,10 +1089,6 @@ header.navigation .navigation-tools {
 }
 .article-item a {
   color: whitesmoke;
-}
-.article-item .outline {
-  border-width: 2px;
-  height: 7.5em;
 }
 @media screen and (max-width: 900px) {
   .article-item {
@@ -1169,7 +1158,7 @@ header.navigation .navigation-tools {
   margin-right: 2.35765%;
   width: 48.82117%;
   margin-right: 0;
-  background-image: url("/images/red.jpg");
+  background-color: #0d28b1;
   background-position: center;
   font-family: "proxima-nova", sans-serif;
   background-size: cover;
@@ -1228,8 +1217,12 @@ button {
   border-color: white;
 }
 
+.subscribe-section {
+  background-color: rgba(55, 51, 245, 0.9);
+}
+
 .subscribe {
-  background-color: #c40824;
+  background-color: #0d28b1;
   padding: 2em;
   text-align: center;
   color: whitesmoke;
@@ -1243,12 +1236,23 @@ button {
 }
 .subscribe p {
   font-family: "proxima-nova", sans-serif;
-  color: black;
   opacity: 0.9;
 }
 .subscribe input {
   margin-top: 1em;
   font-family: "proxima-nova", sans-serif;
+}
+.subscribe input[type=submit] {
+  background-color: whitesmoke;
+  color: #0d28b1;
+  border-style: none;
+  border-width: 0;
+}
+.subscribe input[type=submit] input:hover {
+  background-color: #ddd;
+}
+.subscribe input#text_field {
+  color: black;
 }
 @media (max-width: 900px) {
   .subscribe {

@@ -373,7 +373,6 @@ $texture-bottom-background: darken(white, 10%);
 }
 
 .hero-section {
-  background-color: white;
   padding-top: 6em;
   padding-bottom: 6em;
   background-position: center;
@@ -381,26 +380,19 @@ $texture-bottom-background: darken(white, 10%);
   position: relative;
   border-color: transparent;
   background-repeat: no-repeat;
-      background-image: url('/images/hero.jpg');
-
+  background-image: url("/images/hero.jpg");
+  color: white;
 
 
 }
 
 
 
-.hero-content {
-  background-color: white;
-  padding-right: 5em;
-  padding-left: 5em;
-  padding-top: 3em;
-  padding-bottom: 3em;
-  box-shadow: $form-box-shadow;
-}
+
 
 .red-section {
 
-  background-color: $primary-red;
+  background-color: $dark-gray;
   font-family: $heading-font-family;
   color: whitesmoke;
 }
@@ -413,14 +405,6 @@ $texture-bottom-background: darken(white, 10%);
   font-size: 4em;
     line-height: 1.1em;
     margin-bottom: 0.25em;
-    color: transparent;
-
-    background-image: url(/images/hero.jpg);
-    background-position: center;
-    background-size: fit;
-
-    -webkit-background-clip: text;
-    background-clip: text;
 }
 
 .hero p {
@@ -494,9 +478,6 @@ $texture-bottom-background: darken(white, 10%);
   padding: 5px;
   margin-top: 20px;
   font-weight: 800;
-  background-image: url("/images/red.jpg");
-  background-size: cover;
-  background-position: center;
   font-family: $heading-font-family;
   font-size: $base-font-size*0.8;
 
@@ -504,10 +485,7 @@ $texture-bottom-background: darken(white, 10%);
     a {
       color: whitesmoke;
     }
-    .outline {
-      border-width: 2px;
-      height: 7.5em;
-    }
+
 
     @include media(max-width 900px) {
       @include span-columns(4);
@@ -533,7 +511,7 @@ $texture-bottom-background: darken(white, 10%);
 .subject-list {
   @include span-columns(6);
   @include omega();
-  background-image: url('/images/red.jpg');
+  background-color: $primary-blue;
   background-position: center;
   font-family: $heading-font-family;
   background-size: cover;
@@ -576,9 +554,12 @@ $texture-bottom-background: darken(white, 10%);
 button {
   border-color: white;
 }
+.subscribe-section {
+  background-color: rgba(55, 51, 245, 0.9);
 
+}
 .subscribe {
-  background-color: $primary-red;
+  background-color: $primary-blue;
   padding: 2em;
   text-align: center;
   color: whitesmoke;
@@ -593,13 +574,28 @@ button {
 
   p {
     font-family: $heading-font-family;
-    color: black;
     opacity: 0.9;
   }
 
   input {
     margin-top: 1em;
         font-family: $heading-font-family;
+  }
+
+  input[type=submit]  {
+    background-color: whitesmoke;
+    color: $primary-blue;
+    border-style: none;
+    border-width: 0;
+
+    input:hover {
+      background-color: $light-gray;
+    }
+
+  }
+
+  input#text_field {
+    color: black;
   }
 
   @media (max-width: 900px) {
