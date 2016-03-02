@@ -1282,7 +1282,7 @@ button {
 }
 
 .heading {
-  background-image: url("/images/red.jpg");
+  background-color: #0d28b1;
   background-size: cover;
   background-position: center;
   color: whitesmoke;
