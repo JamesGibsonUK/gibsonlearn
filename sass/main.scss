@@ -100,6 +100,10 @@ header.navigation {
     padding-left: $navigation-padding;
     padding-right: 2em;
 
+    h2 {
+      margin-top: 0px;
+      margin-bottom: 0px;
+    }
     img {
       max-height: $navigation-height;
       padding: 0.8em 0;

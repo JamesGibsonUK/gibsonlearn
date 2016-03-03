@@ -17,8 +17,8 @@
   text-decoration: none;
   transition: background-color $base-duration $base-timing;
   user-select: none;
-  vertical-align: middle;
-  white-space: nowrap;
+  white-space: normal;
+
 
   &:hover,
   &:focus {
