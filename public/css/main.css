@@ -974,6 +974,12 @@ header.navigation .navigation-tools {
   color: white;
 }
 
+.section-blue-special {
+  background-image: url("/images/hero.jpg");
+  color: white;
+  font-weight: 800;
+}
+
 .red-section {
   background-color: #0f0f0f;
   font-family: "proxima-nova", sans-serif;
@@ -1077,6 +1083,9 @@ header.navigation .navigation-tools {
   padding: 5px;
   margin-top: 20px;
   font-weight: 800;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: white;
   font-family: "proxima-nova", sans-serif;
   font-size: 1.04em;
 }

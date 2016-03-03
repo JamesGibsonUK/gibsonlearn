@@ -387,7 +387,11 @@ $texture-bottom-background: darken(white, 10%);
 }
 
 
-
+.section-blue-special {
+  background-image: url("/images/hero.jpg");
+  color: white;
+  font-weight: 800;
+}
 
 
 .red-section {
@@ -479,6 +483,9 @@ $texture-bottom-background: darken(white, 10%);
   padding: 5px;
   margin-top: 20px;
   font-weight: 800;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: white;
   font-family: $heading-font-family;
   font-size: $base-font-size*0.8;
 
