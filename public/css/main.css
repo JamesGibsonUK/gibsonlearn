@@ -1339,6 +1339,11 @@ button {
   margin-bottom: 0px;
   margin-top: 0px;
 }
+@media screen and (max-width: 900px) {
+  .heading h1 {
+    font-size: 1.7em;
+  }
+}
 
 .sidebar {
   float: left;
