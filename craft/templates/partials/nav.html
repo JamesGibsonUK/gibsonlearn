@@ -1,3 +1,5 @@
+{% macro is_active(segment) %}{% if craft.request.firstSegment == segment %}active{% endif %}{% endmacro %}
+
 <header class="navigation" role="banner">
   <div class="navigation-wrapper">
     <a href="{{siteUrl}}" class="logo">
@@ -9,16 +11,16 @@
     <nav role="navigation">
       <ul id="js-navigation-menu" class="navigation-menu show">
         <li class="nav-link">
-          <a href="/economics">Economics</a>
+          <a {% if craft.request.firstSegment == "economics" %}class="active"{% endif %} href="/economics">Economics</a>
         </li>
         <li class="nav-link">
-          <a href="/geography">Geography</a>
+          <a {% if craft.request.firstSegment == "geography" %}class="active"{% endif %} href="/geography">Geography</a>
         </li>
         <li class="nav-link">
-          <a href="/maths">Maths</a>
+          <a {% if craft.request.firstSegment == "maths" %}class="active"{% endif %} href="/maths">Maths</a>
         </li>
         <li class="nav-link">
-          <a href="/politics">Politics</a>
+          <a {% if craft.request.firstSegment == "politics" %}class="active"{% endif %} href="/politics">Politics</a>
         </li>
       </ul>
     </nav>

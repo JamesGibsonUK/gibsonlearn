@@ -190,6 +190,10 @@ header.navigation {
       width: auto;
     }
 
+a.active {
+  color: whitesmoke;
+}
+
     a {
       color: $navigation-color;
       display: inline-block;

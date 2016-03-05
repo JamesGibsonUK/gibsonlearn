@@ -806,6 +806,9 @@ header.navigation ul li.nav-link {
     width: auto;
   }
 }
+header.navigation ul li.nav-link a.active {
+  color: whitesmoke;
+}
 header.navigation ul li.nav-link a {
   color: rgba(255, 255, 255, 0.7);
   display: inline-block;
