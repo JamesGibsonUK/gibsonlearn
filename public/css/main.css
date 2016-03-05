@@ -1241,6 +1241,10 @@ button {
 }
 
 .subscribe-section {
+  background-image: url("/images/footer-image.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
   background-color: rgba(55, 51, 245, 0.9);
 }
 

@@ -571,7 +571,12 @@ button {
   border-color: white;
 }
 .subscribe-section {
-  background-color: rgba(55, 51, 245, 0.9);
+
+  background-image: url("/images/footer-image.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+    background-color: rgba(55, 51, 245, 0.9);
 
 }
 .subscribe {
