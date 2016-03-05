@@ -1291,12 +1291,13 @@ button {
 .content:last-child {
   margin-right: 0;
 }
-@media (max-width: 900px) {
+@media (max-width: 1000px) {
   .content {
     float: left;
     display: block;
     margin-right: 2.35765%;
     width: 100%;
+    padding-right: 0;
   }
   .content:last-child {
     margin-right: 0;
@@ -1331,7 +1332,7 @@ button {
   position: relative;
   width: 100%;
 }
-@media (max-width: 900px) {
+@media (max-width: 1000px) {
   .sidebar {
     float: left;
     display: block;
