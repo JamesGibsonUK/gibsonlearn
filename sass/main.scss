@@ -353,7 +353,13 @@ a.active {
 
 .section {
   padding: 2em;
+
+  @include media(max-width 900px) {
+    padding: 1em;
+  }
+
 }
+
 
 .footer-section {
   background-color: $dark-gray;
