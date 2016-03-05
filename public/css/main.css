@@ -985,6 +985,12 @@ header.navigation .navigation-tools {
   background-image: url("/images/hero.jpg");
   color: white;
 }
+@media screen and (max-width: 900px) {
+  .hero-section {
+    padding-top: 3em;
+    padding-bottom: 3em;
+  }
+}
 
 .section-blue-special {
   background-image: url("/images/hero.jpg");
@@ -1007,10 +1013,20 @@ header.navigation .navigation-tools {
   line-height: 1.1em;
   margin-bottom: 0.25em;
 }
+@media screen and (max-width: 900px) {
+  .hero h1, .hero h2 {
+    font-size: 2em;
+  }
+}
 
 .hero p {
   font-family: "proxima-nova", sans-serif;
   font-size: 1.5em;
+}
+@media screen and (max-width: 900px) {
+  .hero p {
+    font-size: 1em;
+  }
 }
 
 .site-information-box {
