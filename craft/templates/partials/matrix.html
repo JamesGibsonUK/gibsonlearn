@@ -14,7 +14,7 @@
 
         {% set image = block.image.first() %}
         {% if image %}
-            <img src="{{ image.getUrl('thumb') }}" width="{{ image.getWidth('thumb') }}" height="{{ image.getHeight('thumb') }}" alt="{{ image.title }}">
+            <img src="{{ image.getUrl() }}" width="{{ image.getWidth() }}" height="{{ image.getHeight() }}" alt="{{ image.title }}">
         {% endif %}
 
     {% elseif block.type == "quote" %}
