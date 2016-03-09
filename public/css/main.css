@@ -998,6 +998,9 @@ header.navigation .navigation-tools {
     padding-bottom: 3em;
   }
 }
+.hero-section h2 {
+  color: white;
+}
 
 .section-blue-special {
   background-image: url("/images/hero.jpg");
