@@ -973,7 +973,7 @@ class AssetsService extends BaseApplicationComponent
 		// Does the file actually exist?
 		if ($index->fileExists)
 		{
-			return craft()->assetTransforms->getUrlForTransformByTransformIndex($index);
+			return craft()->assetTransforms->getUrlForTransformByAssetAndTransformIndex($file, $index);
 		}
 		else
 		{
@@ -984,7 +984,14 @@ class AssetsService extends BaseApplicationComponent
 				craft()->assetTransforms->storeTransformIndexData($index);
 
 				// Generate the transform
-				craft()->assetTransforms->generateTransform($index);
+				try {
+					craft()->assetTransforms->generateTransform($index);
+				} catch (Exception $e) {
+					// If it failed, log the error, delete transform index and generate a 404.
+					Craft::log($e->getMessage(), LogLevel::Warning, true);
+					craft()->assetTransforms->deleteTransformIndex($index->id);
+					return UrlHelper::getResourceUrl('404');
+				}
 
 				// Update the index
 				$index->fileExists = true;
