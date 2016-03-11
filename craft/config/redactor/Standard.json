@@ -6,3 +6,9 @@
 $('#content').redactor({
     pasteInlineTags: []
 });
+
+use yii\helpers\HtmlPurifier;
+
+$text = HtmlPurifier::process($model->text, [
+    'HTML.ForbiddenElements' => ['p', 'br', '&nbsp;'],
+]);
