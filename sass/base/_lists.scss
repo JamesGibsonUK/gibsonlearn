@@ -2,6 +2,7 @@ ul,
 ol {
   margin: 0;
   padding: 0;
+  margin-bottom: 1em;
   padding-left: 40px;
 }
 
@@ -16,4 +17,8 @@ dl {
   dd {
     margin: 0;
   }
+}
+
+li {
+  margin-bottom: 0.4em;
 }
