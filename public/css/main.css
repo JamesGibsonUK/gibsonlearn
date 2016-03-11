@@ -1105,11 +1105,13 @@ header.navigation .navigation-tools {
 .topic-list ul {
   display: inline-block;
   padding: 0px;
+  margin-bottom: 0px;
 }
 .topic-list ul li {
   display: inline-block;
   margin-left: 1em;
   margin-right: 1em;
+  margin-bottom: 0px;
 }
 .topic-list a {
   color: white;

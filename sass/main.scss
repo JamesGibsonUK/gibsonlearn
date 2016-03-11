@@ -493,12 +493,14 @@ $texture-bottom-background: darken(white, 10%);
   ul {
     display: inline-block;
     padding: 0px;
+    margin-bottom: 0px;
   }
 
   ul li {
     display: inline-block;
     margin-left: 1em;
     margin-right: 1em;
+    margin-bottom: 0px;
   }
 
   a {
